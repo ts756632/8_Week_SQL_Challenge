@@ -13,7 +13,7 @@ In this case study - you are required to support Danny’s vision and analyse hi
 ## Available Data
 For this case study there is a total of 5 datasets which you will need to combine to solve all of the questions.<br>
 
-Data at a glance:
+Data at a glance:<br>
 **1. Users:** Customers who visit the Clique Bait website are tagged via their cookie_id.
 
 <img width="350" alt="image" src="https://user-images.githubusercontent.com/61902789/132231369-646cd31a-c71a-4fb0-ac51-055d9ce4dfdd.png">
@@ -29,6 +29,10 @@ The sequence_number is used to order the events within each visit.
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/61902789/132233445-c81d7b24-488b-4edb-83fe-2c8c9a585dde.png">
 
 
+**4. Campaign Identifier:** This table shows information for the 3 campaigns that Clique Bait has ran on their website so far in 2020.
+
+<img width="750" alt="image" src="https://user-images.githubusercontent.com/61902789/132233960-fc234a50-c264-45e9-85f0-46a1b625ce5e.png">
+![image](https://user-images.githubusercontent.com/61902789/132233960-fc234a50-c264-45e9-85f0-46a1b625ce5e.png)
 
 ## Digital Analysis
 
