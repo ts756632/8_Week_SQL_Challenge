@@ -14,6 +14,7 @@ Using the available datasets - answer the following questions using a single que
 8. What is the number of views and cart adds for each product category?
 9. What are the top 3 products by purchases?
 
+***
 
 **1. How many users are there?**
 
