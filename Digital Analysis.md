@@ -37,7 +37,7 @@ SELECT COUNT(DISTINCT user_id)
 **2. How many cookies does each user have on average?** 
 
  Step 1: use the COUNT and GROUP BY function to find out how many cookies each user has (inner query). <br>
- Step 2: use the AGV function to calculate average cookies each user has.(outer query)<br>
+ Step 2: use the AGV function to calculate average cookies each user has(outer query).<br>
  Step 3: use the ROUND function to round the number to 3 decimal places.<br>
  
 ````sql
@@ -60,7 +60,7 @@ FROM
 **3. What is the unique number of visits by all users per month?**
 
  Step 1: use the "events" table because we want to know the number of visits. <br>
- Step 2: use the To_CHAR function to transform date type into 'YYYY-MM'. <br>
+ Step 2: use the To_CHAR function to transform date type into 'YYYY-MM.' <br>
  Step 3: use the COUNT and GROUP BY function to calculate unique number of visits by all users per month.<br>
  Step 4: use the ORDER BY function to have a clear view with the order of month.<br>
  
@@ -82,6 +82,10 @@ FROM
 
 **4. What is the number of events for each event type?**
 
+ Step 1: use the COUNT and GROUP BY function to calculate the number of events for each event type from "events" table. <br>
+ Step 2: use the JOIN function to combine "events" and "event_identifier" tables so we can get the event_name for each event_type  <br>
+ Step 3: ORDER BY event_type to have a clear view <br>
+ 
 ````sql
 SELECT a.event_type, 
        b.event_name, 
