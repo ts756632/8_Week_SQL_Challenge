@@ -1,6 +1,6 @@
 # Online Store: Clique Bait
 
-The case study and datasets are from [8 Week SQL Challenge](https://8weeksqlchallenge.com/case-study-6/) written by Danny Ma
+The case study and datasets are from [8 Week SQL Challenge](https://8weeksqlchallenge.com/case-study-6/) written by Danny Ma.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/61902789/132230660-4395d821-90fa-4733-9dba-87c101f77e60.png">
 
