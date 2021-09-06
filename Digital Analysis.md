@@ -12,11 +12,18 @@ In this case study - you are required to support Danny’s vision and analyse hi
 
 ## Available Data
 For this case study there is a total of 5 datasets which you will need to combine to solve all of the questions.<br>
-Data at a glance:
 
+Data at a glance:
 **1. Users:** Customers who visit the Clique Bait website are tagged via their cookie_id.
 
 <img width="350" alt="image" src="https://user-images.githubusercontent.com/61902789/132231369-646cd31a-c71a-4fb0-ac51-055d9ce4dfdd.png">
+
+**2. Events:** Customer visits are logged in this events table at a cookie_id level and the event_type and page_id values can be used to join onto relevant satellite tables to obtain further information about each event.
+
+The sequence_number is used to order the events within each visit.
+
+![image](https://user-images.githubusercontent.com/61902789/132232941-c08fac92-b725-4897-9377-9c0bfc7fd810.png)
+
 
 ## Digital Analysis
 
