@@ -31,7 +31,6 @@ The sequence_number is used to order the events within each visit.
 
 **4. Campaign Identifier:** This table shows information for the 3 campaigns that Clique Bait has ran on their website so far in 2020.
 
-<img width="750" alt="image" src="https://user-images.githubusercontent.com/61902789/132233960-fc234a50-c264-45e9-85f0-46a1b625ce5e.png">
 ![image](https://user-images.githubusercontent.com/61902789/132233960-fc234a50-c264-45e9-85f0-46a1b625ce5e.png)
 
 ## Digital Analysis
