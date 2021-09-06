@@ -11,8 +11,7 @@ SELECT COUNT(DISTINCT user_id)
 
 **Answer:**
 
-![users](https://github.com/ts756632/Online_Store_Analysis/blob/main/image/users.PNG)
-
+<img width="130" alt="image" src="https://github.com/ts756632/Online_Store_Analysis/blob/main/image/users.PNG">
 - There are 500 unique users.
 
 ***
@@ -31,6 +30,7 @@ FROM
 **Answer:**
 
 <img width="130" alt="image" src="https://github.com/ts756632/Online_Store_Analysis/blob/main/image/cookies.PNG">
+
 - Each user has 3.564 cookies on average.
 
 ***
