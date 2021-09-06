@@ -18,7 +18,7 @@ Using the available datasets - answer the following questions using a single que
 
 **1. How many users are there?**
 
-I used DISTINCT to obtain unique user_id and COUNT the number from the TABLE "users".
+We use the DISTINCT function to obtain unique user_id and COUNT the total number of users from the TABLE "users."
 
 ````sql
 SELECT COUNT(DISTINCT user_id)
@@ -34,7 +34,10 @@ SELECT COUNT(DISTINCT user_id)
 ***
 
 **2. How many cookies does each user have on average?**
-
+ Step 1: use the COUNT and GROUP BY function to find out how many cookies each user has.
+ Step 2: use the AGV function to calculate average cookies each user has.
+ Step 3: use the ROUND function to round the number to 3 decimal places.
+ 
 ````sql
 SELECT ROUND(AVG(count_cookies),3) AS average_cookies
 FROM
