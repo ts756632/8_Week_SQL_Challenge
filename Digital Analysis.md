@@ -36,8 +36,8 @@ The sequence_number is used to order the events within each visit.
 
 **5. Page Hierarchy:** This table lists all of the pages on the Clique Bait website which are tagged and have data passing through from user interaction events.
 
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/61902789/132234402-36efbe5f-b478-4435-94dd-a5324e94a0bf.png">
-![image](https://user-images.githubusercontent.com/61902789/132234402-36efbe5f-b478-4435-94dd-a5324e94a0bf.png)
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/61902789/132234402-36efbe5f-b478-4435-94dd-a5324e94a0bf.png">
+
 
 ## Digital Analysis
 
