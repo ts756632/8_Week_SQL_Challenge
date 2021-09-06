@@ -125,7 +125,7 @@ SELECT a.event_type,
 
 **Answer:**
 
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/61902789/132182065-f2cba7a1-8397-4b82-a982-934a492c09e6.pn">
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/61902789/132182065-f2cba7a1-8397-4b82-a982-934a492c09e6.png">
 
  - 78.97 % of visits which have a purchase event.
 ***
