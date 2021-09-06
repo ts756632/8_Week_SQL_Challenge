@@ -12,7 +12,7 @@ SELECT COUNT(DISTINCT user_id)
 **Answer:**
 
 <img width="85" alt="image" src="https://user-images.githubusercontent.com/61902789/132160329-ec3c10f3-29b1-4cba-89f9-0f5f8bc496f9.png">
- - There are 500 unique users.
+ -  There are 500 unique users.
 
 ***
 
