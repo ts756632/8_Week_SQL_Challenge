@@ -54,7 +54,7 @@ FROM
 
 ````sql
   SELECT To_CHAR(start_date,'YYYY-MM') AS month, 
-  		   COUNT(cookie_id) 
+  	 COUNT(cookie_id) 
     FROM clique_bait.users 
    GROUP BY month
    ORDER BY month;
@@ -71,7 +71,7 @@ FROM
 
 ````sql
 SELECT a.event_type, 
-	   b.event_name, 
+       b.event_name, 
        COUNT(a.event_type) AS count_event
   FROM clique_bait.events a 
   JOIN clique_bait.event_identifier b
@@ -91,7 +91,7 @@ SELECT a.event_type,
 ````sql
 WITH CTE_new_event AS (
 SELECT a.event_type, 
-	   b.event_name, 
+       b.event_name, 
        COUNT(a.event_type) AS count_event
   FROM clique_bait.events a 
   JOIN clique_bait.event_identifier b
@@ -101,10 +101,8 @@ SELECT a.event_type,
   )
   
  SELECT  
-    SUM(CASE WHEN event_name = 'Purchase' THEN count_event 
-        ELSE 0 END) / 
-    SUM(CASE WHEN event_name = 'Page View' THEN count_event 
-        ELSE 0 END) *100  AS percentage
+    SUM(CASE WHEN event_name = 'Purchase' THEN count_event ELSE 0 END) /         
+    SUM(CASE WHEN event_name = 'Page View' THEN count_event ELSE 0 END) *100  AS percentage        
    FROM CTE_new_event;
 ````
 
@@ -120,7 +118,7 @@ SELECT a.event_type,
 ````sql
 WITH CTE_new_event AS (
 SELECT a.event_type, 
-	   b.event_name, 
+       b.event_name, 
        COUNT(a.event_type) AS count_event
   FROM clique_bait.events a 
   JOIN clique_bait.event_identifier b
@@ -130,10 +128,8 @@ SELECT a.event_type,
   )
   
  SELECT  
-   (1-SUM(CASE WHEN event_name = 'Purchase' THEN count_event 
-        ELSE 0 END) / 
-    SUM(CASE WHEN event_name = 'Add to Cart' THEN count_event 
-        ELSE 0 END)) *100  AS percentage
+   (1-SUM(CASE WHEN event_name = 'Purchase' THEN count_event ELSE 0 END) /         
+    SUM(CASE WHEN event_name = 'Add to Cart' THEN count_event ELSE 0 END)) *100  AS percentage      
    FROM CTE_new_event;
 ````
 
@@ -148,7 +144,28 @@ SELECT a.event_type,
 
 ````sql
 SELECT a.page_id, 
-	   b.page_name, 
+       b.page_name, 
+       COUNT(a.page_id) AS number_of_views
+  FROM clique_bait.events a 
+  JOIN clique_bait.page_hierarchy b
+    ON a.page_id = b.page_id
+ GROUP BY a.page_id, b.page_name
+ ORDER BY number_of_views DESC
+ LIMIT 3;
+````
+
+**Answer:**
+
+![image](https://user-images.githubusercontent.com/61902789/132184328-051de857-2026-437f-991b-e4ca37830575.png)
+
+ - All Products, Lobster and Crab .
+***
+
+**8. What is the number of views and cart adds for each product category?**
+
+````sql
+SELECT a.page_id, 
+       b.page_name, 
        COUNT(a.page_id) AS number_of_views
   FROM clique_bait.events a 
   JOIN clique_bait.page_hierarchy b
