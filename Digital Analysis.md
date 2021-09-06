@@ -50,3 +50,19 @@ FROM
 ![image](https://user-images.githubusercontent.com/61902789/132160147-3281d7b9-8a2d-472c-ac4f-fbc73457870c.png)
 
 ***
+
+
+**4. What is the number of events for each event type?**
+
+````sql
+SELECT event_type, COUNT(event_type) AS count_event
+  FROM clique_bait.events 
+ GROUP BY event_type
+ ORDER BY event_type;
+````
+
+**Answer:**
+
+![image](https://user-images.githubusercontent.com/61902789/132166788-54649245-114a-4afc-a839-ebd36e339092.png)
+
+***
