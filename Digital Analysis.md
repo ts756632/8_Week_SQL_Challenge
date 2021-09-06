@@ -158,26 +158,33 @@ SELECT a.page_id,
 
 ![image](https://user-images.githubusercontent.com/61902789/132184328-051de857-2026-437f-991b-e4ca37830575.png)
 
- - All Products, Lobster and Crab .
+ - All Products, Lobster and Crab.
 ***
 
 **8. What is the number of views and cart adds for each product category?**
 
 ````sql
-SELECT a.page_id, 
-       b.page_name, 
-       COUNT(a.page_id) AS number_of_views
-  FROM clique_bait.events a 
-  JOIN clique_bait.page_hierarchy b
-    ON a.page_id = b.page_id
- GROUP BY a.page_id, b.page_name
- ORDER BY number_of_views DESC
- LIMIT 3;
+SELECT c.product_category,
+       SUM(CASE WHEN sub.event_type = 1 THEN 1 ELSE 0 
+       END) AS page_views,
+       SUM(CASE WHEN sub.event_type = 2 THEN 1 ELSE 0
+       END) AS car_adds
+FROM clique_bait.page_hierarchy c
+JOIN
+    (SELECT a.page_id, 
+         b.event_type, 
+           b.event_name  
+      FROM clique_bait.events a 
+      JOIN clique_bait.event_identifier b
+        ON a.event_type = b.event_type
+       AND a.event_type IN (1,2)
+       ) sub 
+     ON  c.page_id = sub.page_id  
+GROUP BY c.product_category;
 ````
 
 **Answer:**
 
-![image](https://user-images.githubusercontent.com/61902789/132184328-051de857-2026-437f-991b-e4ca37830575.png)
+![image](https://user-images.githubusercontent.com/61902789/132196846-a23c580b-0a0f-4c87-ad00-08e08280d83f.png)
 
- - All Products, Lobster and Crab .
 ***
