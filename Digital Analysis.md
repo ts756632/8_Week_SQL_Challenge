@@ -9,7 +9,7 @@ SELECT COUNT(DISTINCT user_id)
   FROM clique_bait.users LIMIT 10;
 ````
 
-**Answer: **
+**Answer:**
 
 ![users](https://github.com/ts756632/Online_Store_Analysis/blob/main/image/users.PNG)
 
@@ -28,7 +28,7 @@ FROM
   )sub;
 ````
 
-**Answer: **
+**Answer:**
 
 ![](https://github.com/ts756632/Online_Store_Analysis/blob/main/image/cookies.PNG)
 
