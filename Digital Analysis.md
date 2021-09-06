@@ -10,10 +10,10 @@ SELECT
 FROM clique_bait.users LIMIT 10;
 ````
 
-**Answer:**
+**Answer: **
 
 ![users](https://github.com/ts756632/Online_Store_Analysis/blob/main/image/users.PNG)
 
-- There are 500 unique users.
+There are 500 unique users.
 
 ***
