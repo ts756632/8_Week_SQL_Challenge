@@ -188,3 +188,32 @@ GROUP BY c.product_category;
 ![image](https://user-images.githubusercontent.com/61902789/132196846-a23c580b-0a0f-4c87-ad00-08e08280d83f.png)
 
 ***
+
+**Answer:**
+
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/61902789/132182065-f2cba7a1-8397-4b82-a982-934a492c09e6.png">
+
+ - 78.97 % of visits which view the checkout page but do not have a purchase event.
+***
+
+**9. What are the top 3 products by purchases?**
+
+````sql
+SELECT DISTINCT product_id, sub.page_id
+FROM clique_bait.page_hierarchy c
+JOIN
+(SELECT a.page_id, 
+	   b.event_type, 
+       b.event_name  
+  FROM clique_bait.events a 
+  JOIN clique_bait.event_identifier b
+    ON a.event_type = b.event_type
+   AND a.event_type = 3 
+   ) sub 
+ ON  c.page_id = sub.page_id
+````
+
+**Answer:**
+
+
+***
