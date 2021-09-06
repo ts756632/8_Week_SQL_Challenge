@@ -26,8 +26,8 @@ The sequence_number is used to order the events within each visit.
 
 **3. Event Identifier:** The event_identifier table shows the types of events.
 
-<img width="350" alt="image" src="https://user-images.githubusercontent.com/61902789/132233445-c81d7b24-488b-4edb-83fe-2c8c9a585dde.png">
-![image](https://user-images.githubusercontent.com/61902789/132233445-c81d7b24-488b-4edb-83fe-2c8c9a585dde.png)
+<img width="250" alt="image" src="https://user-images.githubusercontent.com/61902789/132233445-c81d7b24-488b-4edb-83fe-2c8c9a585dde.png">
+
 
 
 ## Digital Analysis
