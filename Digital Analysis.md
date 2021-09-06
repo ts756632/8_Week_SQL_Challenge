@@ -100,3 +100,32 @@ SELECT a.event_type,
 
  - 8.49% of visits which have a purchase event.
 ***
+
+**6. What is the percentage of visits which view the checkout page but do not have a purchase event?**
+
+````sql
+WITH CTE_new_event AS (
+SELECT a.event_type, 
+	   b.event_name, 
+       COUNT(a.event_type) AS count_event
+  FROM clique_bait.events a 
+  JOIN clique_bait.event_identifier b
+    ON a.event_type = b.event_type 
+ GROUP BY a.event_type, b.event_name
+ ORDER BY a.event_type
+  )
+  
+ SELECT  
+   (1-SUM(CASE WHEN event_name = 'Purchase' THEN count_event 
+        ELSE 0 END) / 
+    SUM(CASE WHEN event_name = 'Add to Cart' THEN count_event 
+        ELSE 0 END)) *100  AS percentage
+   FROM CTE_new_event;
+````
+
+**Answer:**
+
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/61902789/132182065-f2cba7a1-8397-4b82-a982-934a492c09e6.pn">
+
+ - 78.97 % of visits which have a purchase event.
+***
