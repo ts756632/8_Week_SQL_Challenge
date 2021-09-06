@@ -19,7 +19,7 @@ SELECT COUNT(DISTINCT user_id)
 **2. How many cookies does each user have on average?**
 
 ````sql
-SELECT AVG(count_cookies) AS average_cookies
+SELECT ROUND(AVG(count_cookies),3) AS average_cookies
 FROM
 (SELECT user_id, COUNT(cookie_id) AS count_cookies
   FROM clique_bait.users 
@@ -29,7 +29,7 @@ FROM
 
 **Answer:**
 
-<img width="130" alt="image" src="https://github.com/ts756632/Online_Store_Analysis/blob/main/image/cookies.PNG">
+<img width="130" alt="image" src=https://user-images.githubusercontent.com/61902789/132160461-32b740ba-f1de-443f-b6b3-906bd7ad9b3f">
 
  - Each user has 3.564 cookies on average.
 
