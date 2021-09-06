@@ -47,6 +47,6 @@ FROM
 
 **Answer:**
 
-![image](![image](https://user-images.githubusercontent.com/61902789/132160147-3281d7b9-8a2d-472c-ac4f-fbc73457870c.png))
+![image](https://user-images.githubusercontent.com/61902789/132160147-3281d7b9-8a2d-472c-ac4f-fbc73457870c.png)
 
 ***
