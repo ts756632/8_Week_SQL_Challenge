@@ -1,4 +1,4 @@
-# Online Store: Clique Bait
+# Case Study #6: Clique Bait
 
 The case study and datasets are from [8 Week SQL Challenge](https://8weeksqlchallenge.com/case-study-6/) written by Danny Ma.
 
@@ -14,9 +14,9 @@ In this case study - you are required to support Danny’s vision and analyse hi
 For this case study there is a total of 5 datasets which you will need to combine to solve all of the questions.<br>
 Data at a glance:
 
-**1. Users: ** Customers who visit the Clique Bait website are tagged via their cookie_id.
+**1. Users:** Customers who visit the Clique Bait website are tagged via their cookie_id.
 
-<img width="450" alt="image" src="https://user-images.githubusercontent.com/61902789/132231369-646cd31a-c71a-4fb0-ac51-055d9ce4dfdd.png">
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/61902789/132231369-646cd31a-c71a-4fb0-ac51-055d9ce4dfdd.png">
 
 ## Digital Analysis
 
