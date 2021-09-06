@@ -74,14 +74,27 @@ SELECT a.event_type,
 **5. What is the percentage of visits which have a purchase event?**
 
 ````sql
-SELECT event_type, COUNT(event_type) AS count_event
-  FROM clique_bait.events 
- GROUP BY event_type
- ORDER BY event_type;
+WITH CTE_new_event AS (
+SELECT a.event_type, 
+	   b.event_name, 
+       COUNT(a.event_type) AS count_event
+  FROM clique_bait.events a 
+  JOIN clique_bait.event_identifier b
+    ON a.event_type = b.event_type 
+ GROUP BY a.event_type, b.event_name
+ ORDER BY a.event_type
+  )
+  
+ SELECT  
+    SUM(CASE WHEN event_name = 'Purchase' THEN count_event 
+        ELSE 0 END) / 
+    SUM(CASE WHEN event_name = 'Page View' THEN count_event 
+        ELSE 0 END) *100  AS percentage
+   FROM CTE_new_event;
 ````
 
 **Answer:**
 
-![image](https://user-images.githubusercontent.com/61902789/132166788-54649245-114a-4afc-a839-ebd36e339092.png)
+![image](https://user-images.githubusercontent.com/61902789/132178624-3f28090a-2609-4d28-8aae-13d0bd43d8a7.png)
 
 ***
