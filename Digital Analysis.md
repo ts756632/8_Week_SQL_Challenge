@@ -18,6 +18,8 @@ Using the available datasets - answer the following questions using a single que
 
 **1. How many users are there?**
 
+I used DISTINCT to obtain unique user_id and COUNT the numbers.
+
 ````sql
 SELECT COUNT(DISTINCT user_id)
   FROM clique_bait.users LIMIT 10;
