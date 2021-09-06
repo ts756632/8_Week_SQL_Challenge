@@ -1,5 +1,22 @@
 # Online Store: Clique Bait
 
+The case study and dataset are from 8 Week SQL Challenge(https://8weeksqlchallenge.com/case-study-6/) written by Danny Ma
+![image](https://user-images.githubusercontent.com/61902789/132230660-4395d821-90fa-4733-9dba-87c101f77e60.png)
+
+## Introduction
+
+Clique Bait is not like your regular online seafood store - the founder and CEO Danny, was also a part of a digital data analytics team and wanted to expand his knowledge into the seafood industry!
+
+In this case study - you are required to support Danny’s vision and analyse his dataset and come up with creative solutions to calculate funnel fallout rates for the Clique Bait online store.
+
+## Available Data
+For this case study there is a total of 5 datasets which you will need to combine to solve all of the questions.
+Data at a glance:
+
+**1. Users:** Customers who visit the Clique Bait website are tagged via their cookie_id.
+![image](https://user-images.githubusercontent.com/61902789/132231369-646cd31a-c71a-4fb0-ac51-055d9ce4dfdd.png)
+
+
 ## Digital Analysis
 
 Using the available datasets - answer the following questions using a single query for each one:
@@ -60,7 +77,7 @@ FROM
 **3. What is the unique number of visits by all users per month?**
 
  Step 1: use the "events" table because we want to know the number of visits. <br>
- Step 2: use the To_CHAR function to transform date type into 'YYYY-MM.' <br>
+ Step 2: use the To_CHAR function to transform date type into 'YYYY-MM' so we can group data by month. <br>
  Step 3: use the COUNT and GROUP BY function to calculate unique number of visits by all users per month.<br>
  Step 4: use the ORDER BY function to have a clear view with the order of month.<br>
  
@@ -83,8 +100,8 @@ FROM
 **4. What is the number of events for each event type?**
 
  Step 1: use the COUNT and GROUP BY function to calculate the number of events for each event type from "events" table. <br>
- Step 2: use the JOIN function to combine "events" and "event_identifier" tables so we can get the event_name for each event_type  <br>
- Step 3: ORDER BY event_type to have a clear view <br>
+ Step 2: use the JOIN function to combine "events" and "event_identifier" tables so we can get the event_name for each event_type.  <br>
+ Step 3: ORDER BY event_type to have a clear view. <br>
  
 ````sql
 SELECT a.event_type, 
