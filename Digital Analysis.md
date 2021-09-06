@@ -33,6 +33,8 @@ The sequence_number is used to order the events within each visit.
 
 ![image](https://user-images.githubusercontent.com/61902789/132233960-fc234a50-c264-45e9-85f0-46a1b625ce5e.png)
 
+<img width="1000" alt="image" src="https://user-images.githubusercontent.com/61902789/132233960-fc234a50-c264-45e9-85f0-46a1b625ce5e.png">
+
 ## Digital Analysis
 
 Using the available datasets - answer the following questions using a single query for each one:
