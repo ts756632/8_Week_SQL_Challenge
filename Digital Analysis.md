@@ -146,7 +146,6 @@ SELECT a.page_id,
 
 **Answer:**
 
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/61902789/132183792-e0c633c4-eaf4-402a-bafe-6359a3341465.png">
 ![image](https://user-images.githubusercontent.com/61902789/132183792-e0c633c4-eaf4-402a-bafe-6359a3341465.png)
 
  - 78.97 % of visits which view the checkout page but do not have a purchase event.
