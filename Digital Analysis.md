@@ -55,6 +55,25 @@ FROM
 **4. What is the number of events for each event type?**
 
 ````sql
+SELECT a.event_type, 
+	   b.event_name, 
+       COUNT(a.event_type) AS count_event
+  FROM clique_bait.events a 
+  JOIN clique_bait.event_identifier b
+    ON a.event_type = b.event_type
+  GROUP BY a.event_type, b.event_name
+  ORDER BY a.event_type;
+````
+
+**Answer:**
+
+![image](https://user-images.githubusercontent.com/61902789/132167785-9147d3af-faa9-44fe-8744-efefd2f9bcf7.png)
+
+***
+
+**5. What is the percentage of visits which have a purchase event?**
+
+````sql
 SELECT event_type, COUNT(event_type) AS count_event
   FROM clique_bait.events 
  GROUP BY event_type
