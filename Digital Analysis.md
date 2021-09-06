@@ -12,7 +12,7 @@ FROM clique_bait.users LIMIT 10;
 
 **Answer:**
 
-![]*(src="https://github.com/ts756632/Online_Store_Analysis/blob/main/image/users.PNG")
+![](https://github.com/ts756632/Online_Store_Analysis/blob/main/image/users.PNG)
 
 <img width="97" alt="image" src="https://github.com/ts756632/Online_Store_Analysis/blob/main/image/users.PNG">
 
