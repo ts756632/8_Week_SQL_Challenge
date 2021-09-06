@@ -47,10 +47,6 @@ FROM
 
 **Answer:**
 
-![image](https://user-images.githubusercontent.com/61902789/132159951-a6863355-e070-43c4-9443-8ba873f86bc9.png)
-
-<img width="130" alt="image" src="https://github.com/ts756632/Online_Store_Analysis/blob/main/image/cookies.PNG">
-
- - Each user has 3.564 cookies on average.
+![image](![image](https://user-images.githubusercontent.com/61902789/132160147-3281d7b9-8a2d-472c-ac4f-fbc73457870c.png))
 
 ***
