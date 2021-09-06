@@ -135,18 +135,18 @@ SELECT a.event_type,
 ````sql
 SELECT a.page_id, 
 	   b.page_name, 
-       COUNT(a.page_id) AS count_page
+       COUNT(a.page_id) AS number_of_views
   FROM clique_bait.events a 
   JOIN clique_bait.page_hierarchy b
     ON a.page_id = b.page_id
  GROUP BY a.page_id, b.page_name
- ORDER BY count_page DESC
+ ORDER BY number_of_views DESC
  LIMIT 3;
 ````
 
 **Answer:**
 
-![image](https://user-images.githubusercontent.com/61902789/132183792-e0c633c4-eaf4-402a-bafe-6359a3341465.png)
+![image](https://user-images.githubusercontent.com/61902789/132184328-051de857-2026-437f-991b-e4ca37830575.png)
 
- - 78.97 % of visits which view the checkout page but do not have a purchase event.
+ - All Products, Lobster and Crab .
 ***
