@@ -31,7 +31,7 @@ FROM
 **Answer:**
 
 ![](https://github.com/ts756632/Online_Store_Analysis/blob/main/image/cookies.PNG)
-<img width="100" alt="image" src="https://github.com/ts756632/Online_Store_Analysis/blob/main/image/cookies.PNG">
+<img width="200" alt="image" src="https://github.com/ts756632/Online_Store_Analysis/blob/main/image/cookies.PNG">
 - Each user has 3.564 cookies on average.
 
 ***
