@@ -22,7 +22,7 @@ Data at a glance:
 
 The sequence_number is used to order the events within each visit.
 
-<img width="350" alt="image" src="https://user-images.githubusercontent.com/61902789/132232941-c08fac92-b725-4897-9377-9c0bfc7fd810.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/61902789/132232941-c08fac92-b725-4897-9377-9c0bfc7fd810.png">
 
 ## Digital Analysis
 
