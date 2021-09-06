@@ -18,7 +18,7 @@ Using the available datasets - answer the following questions using a single que
 
 **1. How many users are there?**
 
-I used DISTINCT to obtain unique user_id and COUNT the numbers.
+I used DISTINCT to obtain unique user_id and COUNT the number.
 
 ````sql
 SELECT COUNT(DISTINCT user_id)
