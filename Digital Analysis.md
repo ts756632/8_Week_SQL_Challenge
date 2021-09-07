@@ -53,9 +53,9 @@ SELECT COUNT(DISTINCT user_id)
 
 **2. How many cookies does each user have on average?** 
 
- -  Use the COUNT and GROUP BY function to find out how many cookies each user has (inner query). <br>
- -  Use the AVG function to calculate average cookies each user has(outer query).<br>
- -  Use the ROUND function to round the number to 3 decimal places.<br>
+ -  Use the COUNT and GROUP BY function to find out how many cookies each user has (inner query). 
+ -  Use the AVG function to calculate average cookies each user has(outer query).
+ -  Use the ROUND function to round the number to 3 decimal places.
  
 ````sql
 SELECT ROUND(AVG(count_cookies),3) AS average_cookies
@@ -76,9 +76,9 @@ FROM
 
 **3. What is the unique number of visits by all users per month?**
 
- -  Use the "events" table because we want to know the number of visits. <br>
- -  Use the To_CHAR function to transform date type into 'YYYY-MM' so we can group data by month. <br>
- -  Use the COUNT and GROUP BY function to calculate unique number of visits by all users per month.<br>
+ -  Use the "events" table because we want to know the number of visits. 
+ -  Use the To_CHAR function to transform date type into 'YYYY-MM' so we can group data by month. 
+ -  Use the COUNT and GROUP BY function to calculate unique number of visits by all users per month.
  -  Use the ORDER BY function to have a clear view with the order of month.<br>
  
 ````sql
@@ -99,9 +99,9 @@ FROM
 
 **4. What is the number of events for each event type?**
 
- -  Use the COUNT and GROUP BY function to calculate the number of events for each event type from "events" table. <br>
- -  Use the JOIN function to combine "events" and "event_identifier" tables so we can get the event_name for each event_type.  <br>
- -  ORDER BY event_type to have a clear view. <br>
+ -  Use the COUNT and GROUP BY function to calculate the number of events for each event type from "events" table. 
+ -  Use the JOIN function to combine "events" and "event_identifier" tables so we can get the event_name for each event_type.  
+ -  ORDER BY event_type to have a clear view. 
  
 ````sql
 SELECT a.event_type, 
@@ -122,14 +122,14 @@ SELECT a.event_type,
 
 **5. What is the percentage of visits which have a purchase event?**
 
- -  Create a CTE using WITH function to store a temporary result. <br>
- -  Use the CASE WHEN statement to determine whether a visit has a purchase or not. <br>
-    If a single visit has a purchase event (event_type = 3), then mark "1," otherwise, "0." <br> 
- -  Use the MAX function and GROUP BY visit_id to mark the visits which have a purchase event. <br>
-    Each visit should have at most a purchase event. <br>
- -  Calculate the percentage of visits which have a purchase event by SUM(purchase)/COUNT(*). <br>
- -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float type to avoid division returning zero. <br>
- -  Use the CAST function to transform the percentage into numeric type so the ROUND function works.<br>
+ -  Create a CTE using WITH function to store a temporary result. 
+ -  Use the CASE WHEN statement to determine whether a visit has a purchase or not. 
+    If a single visit has a purchase event (event_type = 3), then mark "1," otherwise, "0." 
+ -  Use the MAX function and GROUP BY visit_id to mark the visits which have a purchase event. 
+    Each visit should have at most a purchase event. 
+ -  Calculate the percentage of visits which have a purchase event by SUM(purchase)/COUNT(*). 
+ -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float type to avoid division returning zero. 
+ -  Use the CAST function to transform the percentage into numeric type so the ROUND function works.
  
 ````sql
 WITH CTE_new AS(
@@ -156,13 +156,13 @@ WITH CTE_new AS(
 **6. What is the percentage of visits which view the checkout page but do not have a purchase event?**
 
  -  Customers who have a puchase event must have viewed the checkout page.  
- -  Use the MAX function and CASE WHEN statement to determine whether a visit views the checkout page. <br>
-    If a single visit views the checkout page (page_id = 12 AND event_type = 1), then mark "1," otherwise, "0." <br>  
- -  Use the MAX function and CASE WHEN statement to determine whether a visit has a purchase or not. <br>
+ -  Use the MAX function and CASE WHEN statement to determine whether a visit views the checkout page. 
+    If a single visit views the checkout page (page_id = 12 AND event_type = 1), then mark "1," otherwise, "0."  
+ -  Use the MAX function and CASE WHEN statement to determine whether a visit has a purchase or not. 
     If a single visit has a purchase event (event_type = 3), then mark "1," otherwise, "0." 
- -  Calculate the percentage of visits which view the checkout page but do not have a purchase event by 1- SUM(purchase)/SUM(checkout). <br>
- -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float type to avoid division returning zero. <br>
- -  Use the CAST function to transform the percentage into numeric type so the ROUND function works.<br>
+ -  Calculate the percentage of visits which view the checkout page but do not have a purchase event by 1- SUM(purchase)/SUM(checkout). 
+ -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float type to avoid division returning zero. 
+ -  Use the CAST function to transform the percentage into numeric type so the ROUND function works.
 
 ````sql
 WITH CTE_new AS(
