@@ -146,28 +146,26 @@ SELECT a.event_type,
 **5. What is the percentage of visits which have a purchase event?**
 
 ````sql
-WITH CTE_new_event AS (
-SELECT a.event_type, 
-       b.event_name, 
-       COUNT(a.event_type) AS count_event
-  FROM clique_bait.events a 
-  JOIN clique_bait.event_identifier b
-    ON a.event_type = b.event_type 
- GROUP BY a.event_type, b.event_name
- ORDER BY a.event_type
-  )
-  
- SELECT  
-    SUM(CASE WHEN event_name = 'Purchase' THEN count_event ELSE 0 END) /         
-    SUM(CASE WHEN event_name = 'Page View' THEN count_event ELSE 0 END) *100  AS percentage        
-   FROM CTE_new_event;
+WITH CTE_new AS(
+	SELECT visit_id, 
+	       MAX(CASE WHEN event_type = 3 THEN 1 ELSE 0 END) AS purchase
+	  FROM clique_bait.events 
+	 GROUP BY visit_id
+	 )
+ 
+ SELECT COUNT(*) AS unique_number_of_visits,
+        SUM(purchase) AS number_of_purchase,
+        ROUND(CAST(CAST(SUM(purchase)AS float) / CAST(COUNT(*)AS float) *100 AS numeric) , 2) AS percentage
+   FROM CTE_new;
+
 ````
 
 **Answer:**
 
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/61902789/132178624-3f28090a-2609-4d28-8aae-13d0bd43d8a7.png">
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/61902789/132284316-337a4330-514a-43d0-b62a-f354c3835386.png">
+![image](https://user-images.githubusercontent.com/61902789/132284316-337a4330-514a-43d0-b62a-f354c3835386.png)
 
- - 8.49% of visits which have a purchase event.
+ - 49.86% of visits which have a purchase event.
 ***
 
 **6. What is the percentage of visits which view the checkout page but do not have a purchase event?**
