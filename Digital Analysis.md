@@ -246,6 +246,12 @@ GROUP BY c.product_category;
 
 **9. What are the top 3 products by purchases?**
 
+ -  Combine "events" and "page_hierarchy" tables to find out what do customers do on each product
+ -  Filter data with purchase event and count purchases for each product.
+ -  List top 3 products by purchase.
+ -  
+ -  
+ 
 ````sql
 SELECT DISTINCT product_id, sub.page_id
 FROM clique_bait.page_hierarchy c
