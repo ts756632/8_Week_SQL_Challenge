@@ -91,7 +91,7 @@ FROM
 
 **Answer:**
 
-<img width="130" alt="image" src="https://user-images.githubusercontent.com/61902789/132160461-32b740ba-f1de-443f-b6b3-906bd7ad9b3f.png">
+<img width="150" alt="image" src="https://user-images.githubusercontent.com/61902789/132160461-32b740ba-f1de-443f-b6b3-906bd7ad9b3f.png">
 
  - Each user has 3.564 cookies on average.
 
