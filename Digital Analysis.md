@@ -149,9 +149,9 @@ SELECT a.event_type,
  -  Use the CASE WHEN function to determine whether a visit have a purchase or not. <br>
     If a user has a purchase event (event_type = 3), then mark "1," otherwise, "0." <br> 
  -  Use the MAX function and GROUP BY visit_id to mark the visits which have a purchase event. <br>
- -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float to avoid division returns zero. <br>
- -  Calculate the percentage of visits which have a purchase event. <br>
- -  Use the CAST function to transform the percentage into numeric so the ROUND function works.<br>
+ -  Calculate the percentage of visits which have a purchase event by SUM(purchase)/COUNT(*). <br>
+ -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float type to avoid division returns zero. <br>
+ -  Use the CAST function to transform the percentage into numeric type so the ROUND function works.<br>
  
 ````sql
 WITH CTE_new AS(
@@ -162,7 +162,7 @@ WITH CTE_new AS(
 	 )
  
  SELECT COUNT(*) AS unique_number_of_visits,
-        SUM(purchase) AS number_of_purchase,
+        SUM(purchase) AS number_of_purchase, 
         ROUND(CAST(CAST(SUM(purchase)AS float) / CAST(COUNT(*)AS float) *100 AS numeric) , 2) AS percentage
    FROM CTE_new;
 
