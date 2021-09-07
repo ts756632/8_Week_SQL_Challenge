@@ -162,7 +162,7 @@ WITH CTE_new AS(
 
 **Answer:**
 
-![image](https://user-images.githubusercontent.com/61902789/132284316-337a4330-514a-43d0-b62a-f354c3835386.png)
+![image](https://user-images.githubusercontent.com/61902789/132284520-46f1e7ef-e343-4b93-8d18-910be7222af9.png)
 
  - 49.86% of visits which have a purchase event.
 ***
