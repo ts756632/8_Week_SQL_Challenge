@@ -192,7 +192,7 @@ WITH CTE_new AS(
  -  With the conditional statement AND, we can filter data before the join occurs. <br> 
     We are interested in the data with page view event (vent_type = 1) only.  
  -  Use the COUNT and GROUP BY function to calculate the number of page view events for each page. 
- -  ORDER BY number_of_views and LIMIT 3 to get the top 3 pages by number of views. 
+ -  ORDER BY number_of_views DESC and LIMIT 3 to get the top 3 pages by number of views. 
 
 ````sql
 SELECT a.page_id, 
