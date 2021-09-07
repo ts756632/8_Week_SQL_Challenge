@@ -218,35 +218,27 @@ SELECT a.page_id,
 
 ````sql
 SELECT c.product_category,
-       SUM(CASE WHEN sub.event_type = 1 THEN 1 ELSE 0 
-       END) AS page_views,
-       SUM(CASE WHEN sub.event_type = 2 THEN 1 ELSE 0
-       END) AS car_adds
-FROM clique_bait.page_hierarchy c
-JOIN
+       SUM(CASE WHEN sub.event_type = 1 THEN 1 ELSE 0 END) AS page_views,
+       SUM(CASE WHEN sub.event_type = 2 THEN 1 ELSE 0 END) AS car_adds
+  FROM clique_bait.page_hierarchy c
+  JOIN
     (SELECT a.page_id, 
-         b.event_type, 
-           b.event_name  
+            b.event_type, 
+            b.event_name  
       FROM clique_bait.events a 
       JOIN clique_bait.event_identifier b
         ON a.event_type = b.event_type
        AND a.event_type IN (1,2)
        ) sub 
-     ON  c.page_id = sub.page_id  
-GROUP BY c.product_category;
+    ON c.page_id = sub.page_id 
+   AND c.product_category IS NOT NULL 
+ GROUP BY c.product_category;
 ````
 
 **Answer:**
 
-![image](https://user-images.githubusercontent.com/61902789/132196846-a23c580b-0a0f-4c87-ad00-08e08280d83f.png)
+![image](https://user-images.githubusercontent.com/61902789/132333338-8a794c5b-b43b-4c44-b45e-fc785bfb1699.png)
 
-***
-
-**Answer:**
-
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/61902789/132182065-f2cba7a1-8397-4b82-a982-934a492c09e6.png">
-
- - 78.97 % of visits which view the checkout page but do not have a purchase event.
 ***
 
 **9. What are the top 3 products by purchases?**
