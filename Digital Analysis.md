@@ -1,6 +1,6 @@
 # Case Study #6: Clique Bait
 
-The case study and datasets are from [8 Week SQL Challenge](https://8weeksqlchallenge.com/case-study-6/) written by Danny Ma.
+The case study and datasets are from [8 Week SQL Challenge](https://8weeksqlchallenge.com/case-study-6/) created by Danny Ma. Thank you for the great case study!
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/61902789/132230660-4395d821-90fa-4733-9dba-87c101f77e60.png">
 
@@ -12,7 +12,7 @@ In this case study - you are required to support Danny’s vision and analyse hi
 
 ## Available Data
 For this case study there is a total of 5 datasets which you will need to combine to solve all of the questions.<br>
-To obtain the complete data, click [here](https://www.db-fiddle.com/f/jmnwogTsUE8hGqkZv9H7E8/17).<br>
+To obtain the complete data, click [here](https://www.db-fiddle.com/f/jmnwogTsUE8hGqkZv9H7E8/17)!<br>
 
 Data at a glance:<br>
 
