@@ -123,8 +123,8 @@ SELECT a.event_type,
 **5. What is the percentage of visits which have a purchase event?**
 
  -  Create a CTE using WITH function to store a temporary result. <br>
- -  Use the CASE WHEN statement to determine whether a visit have a purchase or not. <br>
-    If a user has a purchase event (event_type = 3), then mark "1," otherwise, "0." <br> 
+ -  Use the CASE WHEN statement to determine whether a visit has a purchase or not. <br>
+    If a single visit has a purchase event (event_type = 3), then mark "1," otherwise, "0." <br> 
  -  Use the MAX function and GROUP BY visit_id to mark the visits which have a purchase event. <br>
     Each visit should have at most a purchase event. <br>
  -  Calculate the percentage of visits which have a purchase event by SUM(purchase)/COUNT(*). <br>
@@ -155,29 +155,34 @@ WITH CTE_new AS(
 
 **6. What is the percentage of visits which view the checkout page but do not have a purchase event?**
 
+ -  Use the MAX function and CASE WHEN statement to determine whether a visit views the checkout page. <br>
+    If a single visit views the checkout page (page_id = 12 AND event_type = 1), then mark "1," otherwise, "0." <br>  
+ -  Use the MAX function and CASE WHEN statement to determine whether a visit has a purchase or not. <br>
+    If a single visit has a purchase event (event_type = 3), then mark "1," otherwise, "0." <br> 
+ -  Calculate the percentage of visits which view the checkout page but do not have a purchase event by 1- SUM(purchase)/SUM(checkout). <br>
+ -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float type to avoid division returning zero. <br>
+ -  Use the CAST function to transform the percentage into numeric type so the ROUND function works.<br>
+
 ````sql
-WITH CTE_new_event AS (
-SELECT a.event_type, 
-       b.event_name, 
-       COUNT(a.event_type) AS count_event
-  FROM clique_bait.events a 
-  JOIN clique_bait.event_identifier b
-    ON a.event_type = b.event_type 
- GROUP BY a.event_type, b.event_name
- ORDER BY a.event_type
-  )
-  
- SELECT  
-   (1-SUM(CASE WHEN event_name = 'Purchase' THEN count_event ELSE 0 END) /         
-    SUM(CASE WHEN event_name = 'Add to Cart' THEN count_event ELSE 0 END)) *100  AS percentage      
-   FROM CTE_new_event;
+WITH CTE_new AS(
+	SELECT visit_id, 
+	       MAX(CASE WHEN page_id = 12 AND event_type = 1 THEN 1 ELSE 0 END) AS checkout,
+	       MAX(CASE WHEN event_type = 3 THEN 1 ELSE 0 END) AS purchase  
+	  FROM clique_bait.events 
+	 GROUP BY visit_id
+	 )
+ 
+ SELECT SUM(checkout) AS number_of_checkout,
+        SUM(purchase) AS number_of_purchase,
+        ROUND(CAST( (1-CAST(SUM(purchase)AS float) / CAST(SUM(checkout) AS float)) *100 AS numeric) , 2) AS percentage
+   FROM CTE_new;
 ````
 
 **Answer:**
 
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/61902789/132182065-f2cba7a1-8397-4b82-a982-934a492c09e6.png">
+![image](https://user-images.githubusercontent.com/61902789/132319139-e9413f3b-e418-41b4-9d08-5df22e492c3e.png)
 
- - 78.97 % of visits which view the checkout page but do not have a purchase event.
+ - 15.5 % of visits which view the checkout page but do not have a purchase event.
 ***
 
 **7. What are the top 3 pages by number of views?**
