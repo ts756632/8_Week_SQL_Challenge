@@ -35,8 +35,8 @@ Let's answer the following questions with the datasets:
 
 **1. How many users are there?**
 
- -  We use the DISTINCT function to obtain unique user_id. <br>
- -  Use the COUNT function to calculate the total number of users from the "users" table. <br>
+ -  We use the DISTINCT function to obtain unique user_id. 
+ -  Use the COUNT function to calculate the total number of users from the "users" table. 
 
 ````sql
 SELECT COUNT(DISTINCT user_id)
