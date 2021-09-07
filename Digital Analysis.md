@@ -195,16 +195,17 @@ SELECT a.page_id,
   FROM clique_bait.events a 
   JOIN clique_bait.page_hierarchy b
     ON a.page_id = b.page_id
+   AND a.event_type = 1 -- a visit with a page view event
  GROUP BY a.page_id, b.page_name
  ORDER BY number_of_views DESC
- LIMIT 3;
+ LIMIT 3
 ````
 
 **Answer:**
 
-![image](https://user-images.githubusercontent.com/61902789/132184328-051de857-2026-437f-991b-e4ca37830575.png)
+![image](https://user-images.githubusercontent.com/61902789/132328671-d5ddef95-d1f0-4610-ad31-860134f083ab.png)
 
- - All Products, Lobster and Crab.
+ - All Products, Checkout and Home Page.
 ***
 
 **8. What is the number of views and cart adds for each product category?**
