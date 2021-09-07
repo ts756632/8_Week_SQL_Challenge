@@ -155,10 +155,11 @@ WITH CTE_new AS(
 
 **6. What is the percentage of visits which view the checkout page but do not have a purchase event?**
 
+ -  Customers who have a puchase event must have viewed the checkout page.  
  -  Use the MAX function and CASE WHEN statement to determine whether a visit views the checkout page. <br>
     If a single visit views the checkout page (page_id = 12 AND event_type = 1), then mark "1," otherwise, "0." <br>  
  -  Use the MAX function and CASE WHEN statement to determine whether a visit has a purchase or not. <br>
-    If a single visit has a purchase event (event_type = 3), then mark "1," otherwise, "0." <br> 
+    If a single visit has a purchase event (event_type = 3), then mark "1," otherwise, "0." 
  -  Calculate the percentage of visits which view the checkout page but do not have a purchase event by 1- SUM(purchase)/SUM(checkout). <br>
  -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float type to avoid division returning zero. <br>
  -  Use the CAST function to transform the percentage into numeric type so the ROUND function works.<br>
