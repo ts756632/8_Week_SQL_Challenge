@@ -8,15 +8,15 @@ The case study and datasets are from [8 Week SQL Challenge](https://8weeksqlchal
 
 ## Introduction
 
-Clique Bait is not like your regular online seafood store - the founder and CEO Danny, was also a part of a digital data analytics team and wanted to expand his knowledge into the seafood industry!
+Clique Bait is not like regular online seafood store - the founder and CEO Danny, was also a part of a digital data analytics team and wanted to expand his knowledge into the seafood industry!
 
-In this case study - you are required to support Danny’s vision and analyse his dataset and come up with creative solutions to calculate funnel fallout rates for the Clique Bait online store.
+In this case study - we are required to support Danny’s vision and analyse his dataset and come up with creative solutions to calculate funnel fallout rates for the Clique Bait online store.
 
 
 
 ## Digital Analysis
 
-Using the available datasets - answer the following questions using a single query for each one:
+Let's answer the following questions:
 
 1. How many users are there?
 2. How many cookies does each user have on average?
@@ -28,6 +28,7 @@ Using the available datasets - answer the following questions using a single que
 8. What is the number of views and cart adds for each product category?
 9. What are the top 3 products by purchases?
 
+To view my queries and solutions, click [here](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/Digital%20Analysis.md)! 
 
 ### Tool used:
 #### 1. PostgreSQL: data analysis 
