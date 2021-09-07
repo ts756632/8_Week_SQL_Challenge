@@ -253,21 +253,31 @@ GROUP BY c.product_category;
  -  
  
 ````sql
-SELECT DISTINCT product_id, sub.page_id
-FROM clique_bait.page_hierarchy c
-JOIN
-(SELECT a.page_id, 
-	   b.event_type, 
-       b.event_name  
-  FROM clique_bait.events a 
-  JOIN clique_bait.event_identifier b
-    ON a.event_type = b.event_type
-   AND a.event_type = 3 
-   ) sub 
- ON  c.page_id = sub.page_id
+WITH CTE_new AS (
+  SELECT a.visit_id, a.page_id, a.event_type
+  FROM clique_bait.events a
+  JOIN 
+    (SELECT visit_id
+     FROM clique_bait.events
+    WHERE event_type = 3) sub
+    ON a.visit_id = sub.visit_id 
+  WHERE event_type = 2
+  ORDER BY visit_id, page_id, event_type
+    )
+  
+  SELECT c.product_id, c.page_name AS product_name,  
+  		 COUNT(c.product_id) AS number_of_purchase
+  FROM CTE_new b
+  JOIN clique_bait.page_hierarchy c
+    ON b.page_id = c.page_id
+  GROUP BY c.product_id, c.page_name 
+  ORDER BY number_of_purchase DESC
+  LIMIT 3
 ````
 
 **Answer:**
+
+![image](https://user-images.githubusercontent.com/61902789/132368635-629a6a64-aa75-479a-b237-3699ddae78be.png)
 
 
 ***
