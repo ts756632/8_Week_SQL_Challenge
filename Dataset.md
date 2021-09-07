@@ -1,5 +1,5 @@
 ## Available Data
-For this case study there is a total of 5 datasets which you will need to combine to solve all of the questions.<br>
+For this case study there is a total of 5 datasets which we will need to combine to solve all of the questions.<br>
 To obtain the complete data, click [here](https://www.db-fiddle.com/f/jmnwogTsUE8hGqkZv9H7E8/17)!<br>
 
 Data at a glance:<br>
