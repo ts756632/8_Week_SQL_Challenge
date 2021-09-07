@@ -77,7 +77,7 @@ SELECT COUNT(DISTINCT user_id)
 **2. How many cookies does each user have on average?** 
 
  -  Use the COUNT and GROUP BY function to find out how many cookies each user has (inner query). <br>
- -  Use the AGV function to calculate average cookies each user has(outer query).<br>
+ -  Use the AVG function to calculate average cookies each user has(outer query).<br>
  -  Use the ROUND function to round the number to 3 decimal places.<br>
  
 ````sql
