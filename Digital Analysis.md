@@ -148,7 +148,7 @@ SELECT a.event_type,
  -  Create a CTE using WITH function to store a temporary result. <br>
  -  Use the CASE WHEN function to determine whether a visit have a purchase or not. <br>
     If a user has a purchase event (event_type = 3), then mark "1," otherwise, "0." <br> 
- -  Use the MAX function and GROUP BY visit_id to mark the visit which have a purchase event. <br>
+ -  Use the MAX function and GROUP BY visit_id to mark the visits which have a purchase event. <br>
  -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float to avoid division returns zero. <br>
  -  Calculate the percentage of visits which have a purchase event. <br>
  -  Use the CAST function to transform the percentage into numeric so the ROUND function works.<br>
