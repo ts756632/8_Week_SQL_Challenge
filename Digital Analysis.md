@@ -190,8 +190,8 @@ WITH CTE_new AS(
 
  -  Use the JOIN function to combine "events" and "page_hierarchy" tables so we can get the page_name for each page_id. 
  -  With the conditional statement AND, we can filter data before the join occurs. <br> 
-    We want to get the data with page view events(vent_type = 1) only.  
- -  Use the COUNT and GROUP BY function to calculate the number of page view events for each pagee. 
+    We are interested in the data with page view event (vent_type = 1) only.  
+ -  Use the COUNT and GROUP BY function to calculate the number of page view events for each page. 
  -  ORDER BY number_of_views and LIMIT 3 to get the top 3 pages by number of views. 
 
 ````sql
