@@ -260,7 +260,7 @@ WITH CTE_new AS (
   JOIN 
     (SELECT visit_id
        FROM clique_bait.events
-      WHERE event_type = 3) sub  -- Filter visit_id to find out customers who have purchase events.
+      WHERE event_type = 3) sub  -- filter visit_id to find out customers who have purchase events
    ON a.visit_id = sub.visit_id 
   WHERE event_type = 2  -- list all products that are added to cart
   ORDER BY visit_id, page_id
