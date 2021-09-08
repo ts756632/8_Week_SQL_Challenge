@@ -246,6 +246,12 @@ GROUP BY c.product_category;
 
 **9. What are the top 3 products by purchases?**
 
+Thinking Process
+ -  Filter visit_id to find out customers who have purchase events.
+ -  Based on the visit_id which has purchase event, list all products that are added to cart.
+ -  Calculate numbers of purchase for each product.
+ 
+ 
  -  Combine "events" and "page_hierarchy" tables to find out what do customers do on each product
  -  Filter data with purchase event and count purchases for each product.
  -  List top 3 products by purchase.
@@ -255,8 +261,7 @@ GROUP BY c.product_category;
 ````sql
 WITH CTE_new AS (
   SELECT a.visit_id, 
-  	 a.page_id, 
-	 a.event_type
+  	 a.page_id
   FROM clique_bait.events a
   JOIN 
     (SELECT visit_id
@@ -264,7 +269,7 @@ WITH CTE_new AS (
       WHERE event_type = 3) sub
    ON a.visit_id = sub.visit_id 
   WHERE event_type = 2
-  ORDER BY visit_id, page_id, event_type
+  ORDER BY visit_id, page_id
   )
   
  SELECT c.product_id, 
