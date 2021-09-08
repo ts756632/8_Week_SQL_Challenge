@@ -58,6 +58,11 @@ SELECT COUNT(DISTINCT user_id)
 
 **2. How many cookies does each user have on average?** 
  
+ **Thinking Process**
+
+ -  Count the number of cookies each user have. 
+ -  Calculate the average number for all users.
+ 
 ````sql
 SELECT ROUND(AVG(count_cookies),3) AS average_cookies
 FROM
@@ -66,10 +71,9 @@ FROM
   GROUP BY user_id
   )sub;
 ````
-
 **Why I use these functions?**
 
- -  Use the COUNT and GROUP BY function to find out how many cookies each user has (inner query). 
+ -  Use the COUNT and GROUP BY functions to find out how many cookies each user has (inner query). 
  -  Use the AVG function to calculate average cookies each user has(outer query).
  -  Use the ROUND function to round the number to 3 decimal places.
  
@@ -83,10 +87,10 @@ FROM
 
 **3. What is the unique number of visits by all users per month?**
 
- -  Use the "events" table because we want to know the number of visits. 
- -  Use the To_CHAR function to transform date type into 'YYYY-MM' so we can group data by month. 
- -  Use the COUNT and GROUP BY function to calculate unique number of visits by all users per month.
- -  Use the ORDER BY function to have a clear view with the order of month.<br>
+ **Thinking Process**
+
+ -  Group data by month. 
+ -  Calculate the unique number of visits for each month.
  
 ````sql
   SELECT To_CHAR(event_time,'YYYY-MM') AS month, 
@@ -95,7 +99,13 @@ FROM
    GROUP BY month
    ORDER BY month;
 ````
+**Why I use these functions?**
 
+ -  Use the "events" table because we want to know the number of visits. 
+ -  Use the To_CHAR function to transform date type into 'YYYY-MM' so we can group data by month. 
+ -  Use the COUNT and GROUP BY functions to calculate the unique number of visits by all users per month.
+ -  Use the ORDER BY function to have a clear look with the order of month.
+ 
 **Answer:**
 
 ![image](https://user-images.githubusercontent.com/61902789/132221884-325639aa-93a0-49b2-a04c-4ebd9ff32d97.png)
@@ -106,10 +116,8 @@ FROM
 
 **4. What is the number of events for each event type?**
 
- -  Use the COUNT and GROUP BY function to calculate the number of events for each event type from "events" table. 
- -  Use the JOIN function to combine "events" and "event_identifier" tables so we can get the event_name for each event_type.  
- -  ORDER BY event_type to have a clear view. 
- 
+**Thinking Process**
+
 ````sql
 SELECT a.event_type, 
        b.event_name, 
@@ -120,7 +128,12 @@ SELECT a.event_type,
   GROUP BY a.event_type, b.event_name
   ORDER BY a.event_type;
 ````
+**Why I use these functions?**
 
+ -  Use the COUNT and GROUP BY function to calculate the number of events for each event type from "events" table. 
+ -  Use the JOIN function to combine "events" and "event_identifier" tables so we can get the event_name for each event_type.  
+ -  ORDER BY event_type to have a clear view. 
+ 
 **Answer:**
 
 ![image](https://user-images.githubusercontent.com/61902789/132167785-9147d3af-faa9-44fe-8744-efefd2f9bcf7.png)
