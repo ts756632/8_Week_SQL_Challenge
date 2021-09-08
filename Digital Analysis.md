@@ -35,14 +35,19 @@ Let's answer the following questions with the datasets:
 
 **1. How many users are there?**
 
- -  We use the DISTINCT function to obtain unique user_id. 
- -  Use the COUNT function to calculate the total number of users from the "users" table. 
+**Thinking Process**
+
+ -  Find out unique user_id. 
 
 ````sql
 SELECT COUNT(DISTINCT user_id)
   FROM clique_bait.users;
 ````
+**Why I use these functions?**
 
+ -  We use the DISTINCT function to obtain unique user_id. 
+ -  Use the COUNT function to calculate the total number of users from the "users" table. 
+ 
 **Answer:**
 
 <img width="85" alt="image" src="https://user-images.githubusercontent.com/61902789/132160329-ec3c10f3-29b1-4cba-89f9-0f5f8bc496f9.png">
@@ -52,10 +57,6 @@ SELECT COUNT(DISTINCT user_id)
 ***
 
 **2. How many cookies does each user have on average?** 
-
- -  Use the COUNT and GROUP BY function to find out how many cookies each user has (inner query). 
- -  Use the AVG function to calculate average cookies each user has(outer query).
- -  Use the ROUND function to round the number to 3 decimal places.
  
 ````sql
 SELECT ROUND(AVG(count_cookies),3) AS average_cookies
@@ -66,6 +67,12 @@ FROM
   )sub;
 ````
 
+**Why I use these functions?**
+
+ -  Use the COUNT and GROUP BY function to find out how many cookies each user has (inner query). 
+ -  Use the AVG function to calculate average cookies each user has(outer query).
+ -  Use the ROUND function to round the number to 3 decimal places.
+ 
 **Answer:**
 
 <img width="150" alt="image" src="https://user-images.githubusercontent.com/61902789/132160461-32b740ba-f1de-443f-b6b3-906bd7ad9b3f.png">
