@@ -74,7 +74,7 @@ FROM
  **Why I use these functions?**
 
  -  Use the COUNT and GROUP BY functions to find out how many cookies each user has (inner query). 
- -  Use the AVG function to calculate average cookies each user has(outer query).
+ -  Use the AVG function to calculate average cookies each user has (outer query).
  -  Use the ROUND function to round the number to 3 decimal places.
  
 **Answer:**
