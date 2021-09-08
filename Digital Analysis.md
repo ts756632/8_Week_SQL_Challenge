@@ -278,11 +278,13 @@ WITH CTE_new AS (
 ````
 **Why I use these functions?**
  
- -  Combine "events" and "page_hierarchy" tables to find out what do customers do on each product
- -  Filter data with purchase event and count purchases for each product.
+ -  Find out visit_id with Purchase event (event_type = 3) using WHERE clause to filter data(inner query winthin CTE).
+ -  SELF JOIN "events" table to get the data with Add to Cart event (WHERE event_type = 2) to find out what products do people purchase for each visit. 
+ -  Create a CTE to store the temporary data.
+ -  Combine "CTE_new" and "page_hierarchy" tables to find out product_name (i.e.page_name).
+ -  COUNT purchases for each product.
  -  List top 3 products by purchase.
- -  
- -  
+ 
 **Answer:**
 
 ![image](https://user-images.githubusercontent.com/61902789/132368635-629a6a64-aa75-479a-b237-3699ddae78be.png)
