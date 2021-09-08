@@ -60,6 +60,7 @@ SELECT COUNT(DISTINCT user_id)
  
  **Thinking Process**
 
+ -  Group data by user_id
  -  Count the number of cookies each user has. 
  -  Calculate the average number for all users.
  
