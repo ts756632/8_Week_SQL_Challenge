@@ -251,14 +251,6 @@ GROUP BY c.product_category;
  -  Filter visit_id to find out customers who have purchase events.
  -  Based on the visit_id which has purchase event, list all products that are added to cart.
  -  Calculate numbers of purchase for each product.
-
-**Why I use these functions?**
- 
- -  Combine "events" and "page_hierarchy" tables to find out what do customers do on each product
- -  Filter data with purchase event and count purchases for each product.
- -  List top 3 products by purchase.
- -  
- -  
  
 ````sql
 WITH CTE_new AS (
@@ -284,7 +276,13 @@ WITH CTE_new AS (
   ORDER BY number_of_purchase DESC
   LIMIT 3
 ````
-
+**Why I use these functions?**
+ 
+ -  Combine "events" and "page_hierarchy" tables to find out what do customers do on each product
+ -  Filter data with purchase event and count purchases for each product.
+ -  List top 3 products by purchase.
+ -  
+ -  
 **Answer:**
 
 ![image](https://user-images.githubusercontent.com/61902789/132368635-629a6a64-aa75-479a-b237-3699ddae78be.png)
