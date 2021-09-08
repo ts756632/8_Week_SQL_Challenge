@@ -246,11 +246,13 @@ GROUP BY c.product_category;
 
 **9. What are the top 3 products by purchases?**
 
-Thinking Process
+**Thinking Process**
+
  -  Filter visit_id to find out customers who have purchase events.
  -  Based on the visit_id which has purchase event, list all products that are added to cart.
  -  Calculate numbers of purchase for each product.
- 
+
+**Why I use these functions?**
  
  -  Combine "events" and "page_hierarchy" tables to find out what do customers do on each product
  -  Filter data with purchase event and count purchases for each product.
