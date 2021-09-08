@@ -35,7 +35,7 @@ Let's answer the following questions with the datasets:
 
 **1. How many users are there?**
 
-**Thinking Process**
+ **Thinking Process**
 
  -  Find out unique user_id. 
 
@@ -43,7 +43,7 @@ Let's answer the following questions with the datasets:
 SELECT COUNT(DISTINCT user_id)
   FROM clique_bait.users;
 ````
-**Why I use these functions?**
+ **Why I use these functions?**
 
  -  We use the DISTINCT function to obtain unique user_id. 
  -  Use the COUNT function to calculate the total number of users from the "users" table. 
@@ -71,7 +71,7 @@ FROM
   GROUP BY user_id
   )sub;
 ````
-**Why I use these functions?**
+ **Why I use these functions?**
 
  -  Use the COUNT and GROUP BY functions to find out how many cookies each user has (inner query). 
  -  Use the AVG function to calculate average cookies each user has(outer query).
@@ -99,7 +99,7 @@ FROM
    GROUP BY month
    ORDER BY month;
 ````
-**Why I use these functions?**
+ **Why I use these functions?**
 
  -  Use the "events" table because we want to know the number of visits. 
  -  Use the To_CHAR function to transform date type into 'YYYY-MM' so we can group data by month. 
@@ -116,8 +116,11 @@ FROM
 
 **4. What is the number of events for each event type?**
 
-**Thinking Process**
+ **Thinking Process**
 
+ -  Group data by event type.
+ -  Count the numbers of events for each type. 
+ 
 ````sql
 SELECT a.event_type, 
        b.event_name, 
@@ -128,7 +131,7 @@ SELECT a.event_type,
   GROUP BY a.event_type, b.event_name
   ORDER BY a.event_type;
 ````
-**Why I use these functions?**
+ **Why I use these functions?**
 
  -  Use the COUNT and GROUP BY function to calculate the number of events for each event type from "events" table. 
  -  Use the JOIN function to combine "events" and "event_identifier" tables so we can get the event_name for each event_type.  
@@ -266,7 +269,7 @@ GROUP BY c.product_category;
 
 **9. What are the top 3 products by purchases?**
 
-**Thinking Process**
+ **Thinking Process**
 
  -  Filter visit_id to find out customers who have purchase events.
  -  Based on the visit_id which has purchase event, list all products that are added to cart.
@@ -296,7 +299,7 @@ WITH CTE_new AS (
   ORDER BY number_of_purchase DESC
   LIMIT 3
 ````
-**Why I use these functions?**
+ **Why I use these functions?**
  
  -  Find out visit_id with Purchase event (event_type = 3) using WHERE clause to filter data(inner query winthin CTE).
  -  SELF JOIN "events" table to get the data with Add to Cart event (WHERE event_type = 2) to find out what products do people purchase for each visit. 
