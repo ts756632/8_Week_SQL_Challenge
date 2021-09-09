@@ -146,14 +146,11 @@ SELECT a.event_type,
 
 **5. What is the percentage of visits which have a purchase event?**
 
- -  Create a CTE using WITH function to store a temporary result. 
- -  Use the CASE WHEN statement to determine whether a visit has a purchase or not. 
-    If a single visit has a purchase event (event_type = 3), then mark "1," otherwise, "0." 
- -  Use the MAX function and GROUP BY visit_id to mark the visits which have a purchase event. 
-    Each visit should have at most a purchase event. 
- -  Calculate the percentage of visits which have a purchase event by SUM(purchase)/COUNT(*). 
- -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float type to avoid division returning zero. 
- -  Use the CAST function to transform the percentage into numeric type so the ROUND function works.
+ **Thinking Process**
+  
+ - Count the totle number of purchase events. 
+ - Count the unique number of visits.
+ - Calculate the percentage of visits which have a purchase event.
  
 ````sql
 WITH CTE_new AS(
@@ -169,7 +166,17 @@ WITH CTE_new AS(
    FROM CTE_new;
 
 ````
-
+ **Why I use these functions?**
+ 
+ -  Create a CTE using WITH function to store a temporary result. 
+ -  Use the CASE WHEN statement to determine whether a visit has a purchase or not. 
+    If a single visit has a purchase event (event_type = 3), then mark "1," otherwise, "0." 
+ -  Use the MAX function and GROUP BY visit_id to mark the visits which have a purchase event. 
+    Each visit should have at most a purchase event. 
+ -  Calculate the percentage of visits which have a purchase event by SUM(purchase)/COUNT(*). 
+ -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float type to avoid division returning zero. 
+ -  Use the CAST function to transform the percentage into numeric type so the ROUND function works.
+ 
 **Answer:**
 
 ![image](https://user-images.githubusercontent.com/61902789/132284520-46f1e7ef-e343-4b93-8d18-910be7222af9.png)
@@ -179,15 +186,12 @@ WITH CTE_new AS(
 
 **6. What is the percentage of visits which view the checkout page but do not have a purchase event?**
 
- -  Customers who have a puchase event must have viewed the checkout page.  
- -  Use the MAX function and CASE WHEN statement to determine whether a visit views the checkout page. 
-    If a single visit views the checkout page (page_id = 12 AND event_type = 1), then mark "1," otherwise, "0."  
- -  Use the MAX function and CASE WHEN statement to determine whether a visit has a purchase or not. 
-    If a single visit has a purchase event (event_type = 3), then mark "1," otherwise, "0." 
- -  Calculate the percentage of visits which view the checkout page but do not have a purchase event by 1- SUM(purchase)/SUM(checkout). 
- -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float type to avoid division returning zero. 
- -  Use the CAST function to transform the percentage into numeric type so the ROUND function works.
-
+ **Thinking Process**
+  
+ - Count the totle number of purchase events. 
+ - Count the totle number of checkout page views.
+ - Calculate the percentage of visits which view the checkout page but ‵do not‵ have a purchase event.
+ 
 ````sql
 WITH CTE_new AS(
 	SELECT visit_id, 
@@ -202,7 +206,17 @@ WITH CTE_new AS(
         ROUND(CAST( (1-CAST(SUM(purchase)AS float) / CAST(SUM(checkout) AS float)) *100 AS numeric) , 2) AS percentage
    FROM CTE_new;
 ````
+**Why I use these functions?**
 
+ -  Customers who have a puchase event must have viewed the checkout page.  
+ -  Use the MAX function and CASE WHEN statement to determine whether a visit views the checkout page. 
+    If a single visit views the checkout page (page_id = 12 AND event_type = 1), then mark "1," otherwise, "0."  
+ -  Use the MAX function and CASE WHEN statement to determine whether a visit has a purchase or not. 
+    If a single visit has a purchase event (event_type = 3), then mark "1," otherwise, "0." 
+ -  Calculate the percentage of visits which view the checkout page but do not have a purchase event by 1- SUM(purchase)/SUM(checkout). 
+ -  Use the CAST function to transform SUM(purchase) and COUNT(*) into float type to avoid division returning zero. 
+ -  Use the CAST function to transform the percentage into numeric type so the ROUND function works.
+ 
 **Answer:**
 
 ![image](https://user-images.githubusercontent.com/61902789/132319139-e9413f3b-e418-41b4-9d08-5df22e492c3e.png)
