@@ -262,13 +262,15 @@ SELECT a.page_id,
 
  **Thinking Process**
  
+ - Filter data with Page View and Add to Cart events.
  - Count the number of views and cart adds for each page_id.
+ - Map page_id to product_category
  - 
  
 ````sql
 SELECT c.product_category,
        SUM(CASE WHEN sub.event_type = 1 THEN 1 ELSE 0 END) AS page_views,
-       SUM(CASE WHEN sub.event_type = 2 THEN 1 ELSE 0 END) AS car_adds
+       SUM(CASE WHEN sub.event_type = 2 THEN 1 ELSE 0 END) AS cart_adds
   FROM clique_bait.page_hierarchy c
   JOIN
     (SELECT page_id, 
