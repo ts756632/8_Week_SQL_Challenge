@@ -148,7 +148,7 @@ SELECT a.event_type,
 
  **Thinking Process**
   
- - Count the totle number of purchase events. 
+ - Count the total number of purchase events. 
  - Count the unique number of visits.
  - Calculate the percentage of visits which have a purchase event.
  
@@ -188,8 +188,8 @@ WITH CTE_new AS(
 
  **Thinking Process**
   
- - Count the totle number of purchase events. 
- - Count the totle number of checkout page views.
+ - Count the total number of purchase events. 
+ - Count the total number of checkout page views.
  - Calculate the percentage of visits which view the checkout page but `do not` have a purchase event.
  
 ````sql
