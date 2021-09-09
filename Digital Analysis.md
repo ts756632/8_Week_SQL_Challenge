@@ -190,7 +190,7 @@ WITH CTE_new AS(
   
  - Count the totle number of purchase events. 
  - Count the totle number of checkout page views.
- - Calculate the percentage of visits which view the checkout page but ‵do not‵ have a purchase event.
+ - Calculate the percentage of visits which view the checkout page but `do not` have a purchase event.
  
 ````sql
 WITH CTE_new AS(
