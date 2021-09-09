@@ -292,7 +292,7 @@ GROUP BY c.product_category;
 
 **Answer:**
 
-![image](https://user-images.githubusercontent.com/61902789/132333338-8a794c5b-b43b-4c44-b45e-fc785bfb1699.png)
+![image](https://user-images.githubusercontent.com/61902789/132708628-913314fb-6708-4772-a679-47cd2146302f.png)
 
 ***
 
