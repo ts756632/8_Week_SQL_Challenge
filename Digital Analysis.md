@@ -225,12 +225,11 @@ WITH CTE_new AS(
 ***
 
 **7. What are the top 3 pages by number of views?**
-
- -  Use the JOIN function to combine "events" and "page_hierarchy" tables so we can get the page_name for each page_id. 
- -  With the conditional statement AND, we can filter data before the join occurs. <br> 
-    We are interested in the data with page view event (vent_type = 1) only.  
- -  Use the COUNT and GROUP BY function to calculate the number of page view events for each page. 
- -  ORDER BY number_of_views DESC and LIMIT 3 to get the top 3 pages by number of views. 
+ 
+ **Thinking Process**
+ 
+ - Filter data with page view events. 
+ - Count the number of views for each page. 
 
 ````sql
 SELECT a.page_id, 
@@ -244,7 +243,14 @@ SELECT a.page_id,
  ORDER BY number_of_views DESC
  LIMIT 3
 ````
+**Why I use these functions?**
 
+ -  Use the JOIN function to combine "events" and "page_hierarchy" tables so we can get the page_name for each page_id. 
+ -  With the conditional statement AND, we can filter data before the join occurs. <br> 
+    We are interested in the data with page view event (vent_type = 1) only.  
+ -  Use the COUNT and GROUP BY functions to calculate the number of page view events for each page. 
+ -  ORDER BY number_of_views DESC and LIMIT 3 to get the top 3 pages by number of views.
+ 
 **Answer:**
 
 ![image](https://user-images.githubusercontent.com/61902789/132328671-d5ddef95-d1f0-4610-ad31-860134f083ab.png)
@@ -254,11 +260,10 @@ SELECT a.page_id,
 
 **8. What is the number of views and cart adds for each product category?**
 
- -  Use WHERE clause to filter data with Page View and Add to Cart event (event_type IN (1,2)) as a subquery
- -  Use the JOIN function to combine "events" and "page_hierarchy" tables and find out what do customers do on each product category. 
- -  With the conditional statement AND, we can filter data before the join occurs. <br> 
-    We are interested in the data which product_category IS NOT NULL.  
- -  Use the SUM function and CASE WHEN statement to calculate the number of views and cart adds for each product category (GROUP BY product_category). 
+ **Thinking Process**
+ 
+ - Count the number of views and cart adds for each page_id.
+ - 
  
 ````sql
 SELECT c.product_category,
@@ -275,6 +280,13 @@ SELECT c.product_category,
    AND c.product_category IS NOT NULL 
 GROUP BY c.product_category;
 ````
+**Why I use these functions?**
+
+ -  Use WHERE clause to filter data with Page View and Add to Cart event (event_type IN (1,2)) as a subquery
+ -  Use the JOIN function to combine "events" and "page_hierarchy" tables and find out what do customers do on each product category. 
+ -  With the conditional statement AND, we can filter data before the join occurs. <br> 
+    We are interested in the data which product_category IS NOT NULL.  
+ -  Use the SUM function and CASE WHEN statement to calculate the number of views and cart adds for each product category (GROUP BY product_category). 
 
 **Answer:**
 
