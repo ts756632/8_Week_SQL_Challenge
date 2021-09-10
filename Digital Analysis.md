@@ -329,7 +329,7 @@ WITH CTE_new AS (
 ````
  **Why I use these functions?**
  
- -  Find out visit_id with Purchase event (event_type = 3) using WHERE clause to filter data(inner query winthin CTE).
+ -  Find out visit_id with Purchase event (event_type = 3) using WHERE clause to filter data(inner query in CTE).
  -  SELF JOIN "events" table to get the data with Add to Cart event (WHERE event_type = 2) to find out what products do people purchase for each visit. 
  -  Create a CTE to store the temporary data.
  -  Combine "CTE_new" and "page_hierarchy" tables to find out product_name (i.e.page_name).
