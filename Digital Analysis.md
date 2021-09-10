@@ -334,7 +334,7 @@ WITH CTE_new AS (
  -  Create a CTE to store the temporary data.
  -  Combine "CTE_new" and "page_hierarchy" tables to find out product_name (i.e.page_name).
  -  COUNT purchases for each product.
- -  List top 3 products by purchase.
+ -  Use LIMIT function to list top 3 products by purchase.
  
 **Answer:**
 
@@ -342,3 +342,10 @@ WITH CTE_new AS (
 
  - Lobster, Oyster and Crab. 
 ***
+
+
+## Insights
+
+ -  Users: There are 500 unique users and each user has 3.564 cookies on average during the period (2020/01-2020/05).
+ -  **There is the most visits in Feb.2020 and the least**
+ -  
