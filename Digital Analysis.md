@@ -263,9 +263,8 @@ SELECT a.page_id,
  **Thinking Process**
  
  - Filter data with Page View and Add to Cart events.
- - Count the number of views and cart adds for each page_id.
- - Map page_id to product_category
- - 
+ - Map page_id to product_category by combining "events" and "page_hierarchy" tables.
+ - Count the number of views and cart adds for each product_category.
  
 ````sql
 SELECT c.product_category,
@@ -285,10 +284,10 @@ GROUP BY c.product_category;
 **Why I use these functions?**
 
  -  Use WHERE clause to filter data with Page View and Add to Cart event (event_type IN (1,2)) as a subquery
- -  Use the JOIN function to combine "events" and "page_hierarchy" tables and find out what do customers do on each product category. 
+ -  Use the JOIN function to combine "events" and "page_hierarchy" tables and map page_id to product_category. 
  -  With the conditional statement AND, we can filter data before the join occurs. <br> 
-    We are interested in the data which product_category IS NOT NULL.  
- -  Use the SUM function and CASE WHEN statement to calculate the number of views and cart adds for each product category (GROUP BY product_category). 
+    We are interested in the data which product_category IS NOT NULL only.  
+ -  Use the GROUP BY, SUM functions and CASE WHEN statement to calculate the number of views and cart adds for each product category (outer query). 
 
 **Answer:**
 
