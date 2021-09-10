@@ -344,8 +344,4 @@ WITH CTE_new AS (
 ***
 
 
-## Insights
 
- -  Users: There are 500 unique users and each user has 3.564 cookies on average during the period (2020/01-2020/05).
- -  **There is the most visits in Feb.2020 and the least**
- -  
