@@ -1,4 +1,5 @@
 # Case Study #6: Online Store Clique Bait
+Tina Huang 2021-09-06 
 
 I am interested in customer behavior in an online shopping website. Through data analysis we can understand customers buying habits, including product preference, frequency patterns, and background factors influencing their decision to buy something. <br>
 
