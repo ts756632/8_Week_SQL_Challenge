@@ -252,32 +252,27 @@ SELECT a.page_id,
 
  **Thinking Process**
  
- - Filter data with Page View and Add to Cart events.
  - Map page_id to product_category by combining "events" and "page_hierarchy" tables.
+ - Filter data with Page View and Add to Cart events.
  - Count the number of views and cart adds for each product_category.
  
 ````sql
-SELECT c.product_category,
-       SUM(CASE WHEN sub.event_type = 1 THEN 1 ELSE 0 END) AS page_views,
-       SUM(CASE WHEN sub.event_type = 2 THEN 1 ELSE 0 END) AS cart_adds
-  FROM clique_bait.page_hierarchy c
-  JOIN
-    (SELECT page_id, 
-            event_type     
-       FROM clique_bait.events 
-      WHERE event_type IN (1,2)
-       ) sub 
-    ON c.page_id = sub.page_id 
-   AND c.product_category IS NOT NULL 
-GROUP BY c.product_category;
+SELECT b.product_category,
+       SUM(CASE WHEN a.event_type = 1 THEN 1 ELSE 0 END) AS page_views,
+       SUM(CASE WHEN a.event_type = 2 THEN 1 ELSE 0 END) AS cart_adds
+  FROM clique_bait.events a
+  JOIN clique_bait.page_hierarchy b   
+    ON a.page_id = b.page_id 
+   AND b.product_category IS NOT NULL 
+GROUP BY b.product_category;
 ````
 **Why I use these functions?**
 
- -  Use WHERE clause to filter data with Page View and Add to Cart event (event_type IN (1,2)) as a subquery
+
  -  Use the JOIN function to combine "events" and "page_hierarchy" tables and map page_id to product_category. 
  -  With the conditional statement AND, we can filter data before the join occurs. <br> 
     We are interested in the data which product_category IS NOT NULL only.  
- -  Use the GROUP BY, SUM functions and CASE WHEN statement to calculate the number of views and cart adds for each product category (outer query). 
+ -  Use the GROUP BY, SUM functions and CASE WHEN statement to calculate the number of views and cart adds for each product category. 
 
 **Answer:**
 
