@@ -22,9 +22,8 @@ For this case study there is a total of 5 datasets which we will need to combine
 
 ***
 
-## 1. Digital Analysis
+## [1. Digital Analysis](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/Case%20Study%20%236/1.%20Digital%20Analysis.md)!
 
-To view my queries and solutions, click [here](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/1.%20Digital%20Analysis.md)! 
 
 Let's answer the following questions:
 
@@ -40,9 +39,8 @@ Let's answer the following questions:
 
 
 
-## 2. Product Funnel Analysis
+## [2. Product Funnel Analysis](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/Case%20Study%20%236/1.%20Digital%20Analysis.md)!
 
-To view my queries and solutions, click [here](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/2.%20Product%20Funnel%20Analysis.md)! 
 
 Using a single SQL query - create a new output table which has the following details:
 
@@ -63,7 +61,7 @@ Use your 2 new output tables - answer the following questions:
 
 
 
-## 3. Campaigns Analysis
+## [3. Campaigns Analysis](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/Case%20Study%20%236/3.%20Campaigns%20Analysis.md)!
 
 Generate a table that has 1 single row for every unique visit_id record and has the following columns:
 
