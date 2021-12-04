@@ -7,7 +7,7 @@ The case studies and datasets are from [8 Week SQL Challenge](https://8weeksqlch
 ### Case Study #6: Online Store Clique Bait
 
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/61902789/132230660-4395d821-90fa-4733-9dba-87c101f77e60.png">
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/61902789/132230660-4395d821-90fa-4733-9dba-87c101f77e60.png">
 
 #### Introduction
 
