@@ -15,7 +15,7 @@ Clique Bait is not like regular online seafood store - the founder and CEO Danny
 
 In this case study - we are required to support Danny’s vision and analyse his dataset and come up with creative solutions to calculate funnel fallout rates for the Clique Bait online store.
 
-
+To view my query and solution, click [here](https://github.com/ts756632/8_Week_SQL_Challenge/tree/main/Case%20Study%20%236)!
 
 **Tool used: PostgreSQL** 
 
