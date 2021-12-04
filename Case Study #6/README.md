@@ -18,7 +18,7 @@ For this case study there is a total of 5 datasets which we will need to combine
 
 **Tool used: PostgreSQL** 
 
-**Skills: Aggregate Functions, Converting Data Types, Windows Functions, Multiple CTE's, Joins, Subqueries**
+**Skills: Aggregate Functions, Converting Data Types, Windows Functions, Multiple CTE's, Joins, Subqueries, CASE WHEN statements**
 
 ***
 
