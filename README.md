@@ -1,6 +1,6 @@
 # 8 Week SQL Challenge
 
-The case study and datasets are from [8 Week SQL Challenge](https://8weeksqlchallenge.com/) created by Danny Ma. Thank you for the great case study!
+The case studies and datasets are from [8 Week SQL Challenge](https://8weeksqlchallenge.com/) created by Danny Ma. Thank you for the great case studies!
 
 ***
 
