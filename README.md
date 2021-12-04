@@ -16,6 +16,9 @@ In this case study - we are required to support Danny’s vision and analyse his
 
 For this case study there is a total of 5 datasets which we will need to combine to solve all of the questions. Take a look at the data [here](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/Dataset.md)!
 
+### Tool used: PostgreSQL 
+### Skills: Aggregate Functions, Converting Data Types, Windows Functions, Multiple CTE's, Joins, Subqueries
+
 ## 1. Digital Analysis
 
 Let's answer the following questions:
@@ -70,9 +73,6 @@ Generate a table that has 1 single row for every unique visit_id record and has 
 - click: count of ad clicks for each visit
 - (Optional column) cart_products: a comma separated text value with products added to the cart sorted by the order they were added to the cart (hint: use the sequence_number)
 
-Use the subsequent dataset to generate at least 5 insights for the Clique Bait team - bonus: prepare a single A4 infographic that the team can use for their management reporting sessions, be sure to emphasise the most important points from your findings.
-
-Some ideas you might want to investigate further include:
 
 Use the subsequent dataset to generate at least 5 insights for the Clique Bait team - bonus: prepare a single A4 infographic that the team can use for their management reporting sessions, be sure to emphasise the most important points from your findings.
 
@@ -84,6 +84,5 @@ Some ideas you might want to investigate further include:
 - What metrics can you use to quantify the success or failure of each campaign compared to eachother?
 
 
-### Tool used:
-#### 1. PostgreSQL: data analysis 
+
 
