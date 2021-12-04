@@ -39,7 +39,7 @@ Let's answer the following questions:
 
 
 
-## [2. Product Funnel Analysis](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/Case%20Study%20%236/1.%20Digital%20Analysis.md)
+## [2. Product Funnel Analysis](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/Case%20Study%20%236/2.%20Product%20Funnel%20Analysis.md)
 
 
 Using a single SQL query - create a new output table which has the following details:
