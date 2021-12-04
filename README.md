@@ -30,7 +30,7 @@ Let's answer the following questions:
 8. What is the number of views and cart adds for each product category?
 9. What are the top 3 products by purchases?
 
-To view my queries and solutions, click [here](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/Digital%20Analysis.md)! 
+To view my queries and solutions, click [here](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/1.%20Digital%20Analysis.md)! 
 
 
 ## 2. Product Funnel Analysis
