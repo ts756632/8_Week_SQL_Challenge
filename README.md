@@ -24,6 +24,8 @@ For this case study there is a total of 5 datasets which we will need to combine
 
 ## 1. Digital Analysis
 
+To view my queries and solutions, click [here](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/1.%20Digital%20Analysis.md)! 
+
 Let's answer the following questions:
 
 1. How many users are there?
@@ -36,10 +38,11 @@ Let's answer the following questions:
 8. What is the number of views and cart adds for each product category?
 9. What are the top 3 products by purchases?
 
-To view my queries and solutions, click [here](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/1.%20Digital%20Analysis.md)! 
 
 
 ## 2. Product Funnel Analysis
+
+To view my queries and solutions, click [here](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/2.%20Product%20Funnel%20Analysis.md)! 
 
 Using a single SQL query - create a new output table which has the following details:
 
@@ -58,7 +61,6 @@ Use your 2 new output tables - answer the following questions:
 4. What is the average conversion rate from view to cart add?
 5. What is the average conversion rate from cart add to purchase?
 
-To view my queries and solutions, click [here](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/2.%20Product%20Funnel%20Analysis.md)! 
 
 
 ## 3. Campaigns Analysis
