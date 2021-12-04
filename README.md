@@ -16,8 +16,11 @@ In this case study - we are required to support Danny’s vision and analyse his
 
 For this case study there is a total of 5 datasets which we will need to combine to solve all of the questions. Take a look at the data [here](https://github.com/ts756632/8_Week_SQL_Challenge/blob/main/Dataset.md)!
 
-### Tool used: PostgreSQL 
-### Skills: Aggregate Functions, Converting Data Types, Windows Functions, Multiple CTE's, Joins, Subqueries
+**Tool used: PostgreSQL** 
+
+**Skills: Aggregate Functions, Converting Data Types, Windows Functions, Multiple CTE's, Joins, Subqueries**
+
+***
 
 ## 1. Digital Analysis
 
