@@ -2,7 +2,7 @@
 Tina Huang 2021-12-03 
 </br>
 </br>
-I am interested in customer behavior in an online shopping website. Through data analysis we can understand customers buying habits, including product preference, frequency patterns, and background factors influencing their decision to buy something. <br>
+I am interested in customer behavior in an online shopping website. Through data analysis we can understand customers buying behavior, including product preference, frequency patterns, and background factors influencing their decision to buy something. <br>
 
 The case study and datasets are from [8 Week SQL Challenge](https://8weeksqlchallenge.com/case-study-6/) created by Danny Ma. Thank you for the great case study!
 
